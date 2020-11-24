@@ -3,7 +3,7 @@
 module input_controller # ( parameter ORDER = 3, WI = 2, WF = 6 )
 (
     input CLK,
-    output reg [7 : 0] out
+    output reg [WI + WF - 1 : 0] out
 );
     localparam CLK_BITS = $clog2(ORDER);
     reg [2 : 0] index = 0;
