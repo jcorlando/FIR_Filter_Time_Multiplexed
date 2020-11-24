@@ -6,9 +6,10 @@ module tb_FIR_Filter_Time_Multiplexed;
     reg CLK = 0;                            // Clock
 
     // Clock generation
-    always #30 CLK <= ~CLK;
+    always #15 CLK <= ~CLK;
 
     // Instantiate DUT
-    top  top( .CLK(CLK) );                  // Clock
+    top  # (.ORDER(3))
+        top( .CLK(CLK) );                  // Clock
     
 endmodule
