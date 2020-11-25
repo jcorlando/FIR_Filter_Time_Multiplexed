@@ -6,7 +6,7 @@ module tb_FIR_Filter_Time_Multiplexed;
     reg CLK = 0;                            // Clock
 
     // Clock generation
-    always #20 CLK <= ~CLK;
+    always #35 CLK <= ~CLK;
 
     // Instantiate DUT
     top  # (.ORDER(3))
